@@ -6,6 +6,7 @@ import java.util.ArrayList;
  *  Creates several objects of different types of animals, writes them to the console,
  *  and writes them to a file called animals.txt
  *
+ *  @version 2.0
  *  @author Matt Green, Lucas Nolting
  */
 
@@ -23,6 +24,12 @@ public class Main {
         }
     }
 
+    /**
+     * Main method that instances 3 objects that represent different
+     * animals, and prints them to the console.
+     * @param args Allows arguments in calls in the main method.
+     * @throws Exception Throws a file not found exception if Animal.txt cannot be found
+     */
     public static void main(String[] args) throws Exception{
 
         ArrayList<Talkable> zoo = new ArrayList<>();
@@ -41,6 +48,12 @@ public class Main {
 
     }
 
+    /**
+     * This method prints a pets name and what they
+     * can do to a file and to the console.
+     * @param p accepts a pet type to decide what that pet can say.
+     * @throws Exception Throws a "File not found" exception if Animal.txt cannot be found/
+     */
     public static void printOut(Talkable p)  throws Exception {
         System.out.println(p + " says=" + p.talk());
         outFile.fileWrite(p + " says=" + p.talk());
