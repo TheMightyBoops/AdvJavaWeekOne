@@ -43,6 +43,7 @@ public class Main {
             printOut(thing);
             
         }
+        outFile.fileClose();
       
         
 
@@ -61,6 +62,8 @@ public class Main {
             Cat c = (Cat)p;
             System.out.println(((Cat) p).getMousesKilled());
         }
-        outFile.fileClose(); 
+
     }
+
+
 }
