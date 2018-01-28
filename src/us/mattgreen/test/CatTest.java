@@ -3,23 +3,29 @@ import org.junit.*;
 import us.mattgreen.Cat;
 
 public class CatTest {
-    private Cat Douglas = new Cat(5, "Douglas");
+    private Cat douglas = new Cat(5, "Douglas");
 
     @Test
     public void catBuildTest() {
-        Assert.assertNotNull("The constructor is not building a cat properly", Douglas);
+        Assert.assertNotNull("The constructor is not building a cat properly", douglas);
     }
 
     @Test
     public void mouseTest() {
-        Assert.assertTrue("The cat has a invalid amount of mice", Douglas.getMousesKilled() > -1);
+        Assert.assertTrue("The cat has a invalid amount of mice", douglas.getMousesKilled() > -1);
     }
 
     @Test
     public void addMouseTest() {
-        int mouseTester = Douglas.getMousesKilled() + 1;
-        Douglas.addMouse();
+        int mouseTester = douglas.getMousesKilled() + 1;
+        douglas.addMouse();
         Assert.assertEquals("The addMouse() method is defective",
-                mouseTester, Douglas.getMousesKilled());
+                mouseTester, douglas.getMousesKilled());
     }
+
+    @Test
+    public void talkTest() {
+        Assert.assertEquals("The cat cannot talk.","Meow", douglas.talk());
+    }
+
 }
